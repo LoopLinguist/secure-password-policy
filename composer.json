@@ -1,0 +1,37 @@
+{
+    "name": "looplinguist/secure-password-policy",
+    "description": "This is used to prevent the use of previously used passwords in Laravel.",
+    "keywords": [
+        "looplinguist",
+        "secure-password-policy"
+    ],
+    "type": "library",
+    "homepage": "https://github.com/LoopLinguist/secure-password-policy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shyam",
+            "email": "code@shyambabu.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^10.0"
+    },
+    "require-dev": {},
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "LoopLinguist\\SecurePasswordPolicy\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LoopLinguist\\SecurePasswordPolicy\\SecurePasswordPolicyServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
+}
