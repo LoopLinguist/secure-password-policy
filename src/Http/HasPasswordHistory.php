@@ -22,10 +22,12 @@ class HasPasswordHistory implements _PasswordHistory
         if (Auth::user()->passwordHistories->pluck('password')->contains(fn ($value) => Hash::check($this->newPassword, $value))) {
             return true;
         }
+
         // Create a new password history record for the user
         Auth::user()->passwordHistories()->save(new PasswordHistory([
             'password' => Hash::make($this->newPassword),
         ]));
+        
         return false;
     }
 }
